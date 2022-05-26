@@ -1,0 +1,26 @@
+:root {
+  // Colors
+
+  --color-black: #000;
+  --color-light: #fff;
+  --color-dark: #232425;
+  --color-primary: #2c1258;
+  --color-secondary: #f4ab00;
+  --color-purple: #6425cb;
+  --color-bush: #604b83;
+
+  // Offsets
+
+  --container-horizontal-offset: #{em(25px)};
+  --design-mw: #{em(1160px)};
+  --mw: calc(var(--design-mw) + var(--container-horizontal-offset) * 2);
+  --grid-gap: #{em(20px)};
+
+  // Fonts
+
+  --font-family: "Nunito", sans-serif;
+
+  // Shades
+  // Z-indexes
+  // Border-radiuses
+}
