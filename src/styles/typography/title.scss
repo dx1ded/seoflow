@@ -1,0 +1,27 @@
+.title {
+  font-weight: 400;
+
+  // Variants
+
+  &--primary {
+    color: var(--color-primary);
+  }
+
+  &--secondary {
+    color: var(--color-secondary);
+  }
+
+  &--thindly {
+    color: var(--color-light);
+  }
+
+  // Sizes
+
+  &--xl {
+    font-size: rem(42px);
+  }
+
+  &--md {
+    font-size: rem(19px);
+  }
+}

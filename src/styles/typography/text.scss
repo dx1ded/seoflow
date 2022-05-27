@@ -1,6 +1,18 @@
 .text {
   line-height: em(34px, 18px);
 
+  // Variants
+
+  &--primary {
+    color: var(--color-bush);
+  }
+
+  &--secondary {
+    color: var(--color-light);
+  }
+
+  // Sizes
+
   &--md {
     font-size: rem(18px);
   }

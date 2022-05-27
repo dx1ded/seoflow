@@ -8,26 +8,52 @@
 // Sections
 
 @import "@partials/index/home";
+@import "@partials/index/why";
+@import "@partials/index/optimization";
+@import "@partials/index/services";
+@import "@partials/index/how";
 
-.top-wave::before,
-.bottom-wave::after {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: rem(115px);
-  content: "";
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+.site-container {
+  height: 20000px;
 }
 
-.top-wave::before {
-  top: 0;
-  background-image: url("@images/top-wave.png");
-  transform: translateY(-100%);
+.top-wave,
+.bottom-wave {
+  position: relative;
+  z-index: -1;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: rem(115px);
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 }
 
-.bottom-wave::after {
-  bottom: 0;
-  background-image: url("@images/bottom-wave.png");
-  transform: translateY(100%);
+.top-wave {
+  &::before {
+    top: 0;
+    background-image: url("@images/top-wave.png");
+    transform: translateY(-100%);
+  }
+
+  &--violet::before {
+    background-image: url("@images/top-wave-violet.png");
+  }
+}
+
+.bottom-wave {
+  &::after {
+    bottom: 0;
+    background-image: url("@images/bottom-wave.png");
+    transform: translateY(100%);
+  }
+
+  &--violet::after {
+    background-image: url("@images/bottom-wave-violet.png");
+  }
 }

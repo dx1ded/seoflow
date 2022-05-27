@@ -1,0 +1,94 @@
+.services {
+  margin-bottom: rem(190px);
+
+  &__title {
+    margin-bottom: rem(30px);
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: rem(35px);
+    margin-bottom: rem(90px);
+  }
+}
+
+.services-card {
+  position: relative;
+  padding: rem(30px) 0;
+  text-align: center;
+  background-color: var(--color-light);
+  box-shadow: 0 20px 60px rgb(0 0 0 / 5%);
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: rem(25px);
+    height: rem(25px);
+    content: "";
+    background-color: var(--color-secondary);
+    transform: translate(-50%, 50%);
+  }
+
+  svg {
+    width: rem(25px);
+    height: rem(25px);
+    margin-bottom: rem(15px);
+  }
+
+  &__name {
+    font-weight: 400;
+    color: var(--color-primary);
+  }
+
+  &--active {
+    background-color: var(--color-secondary);
+
+    .services-card__name {
+      color: var(--color-light);
+    }
+  }
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    margin-bottom: rem(15px);
+    font-size: rem(34px);
+  }
+
+  &__description {
+    max-width: rem(420px);
+    margin-bottom: rem(25px);
+  }
+
+  &__options {
+    margin-bottom: rem(50px);
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+
+    &::before {
+      display: inline-block;
+      width: rem(15px);
+      height: rem(15px);
+      margin-right: rem(18px);
+      content: "";
+      background-image: url("#/tick-through-circle");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(20px);
+    }
+  }
+}

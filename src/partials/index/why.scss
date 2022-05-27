@@ -1,0 +1,135 @@
+.why {
+  padding-bottom: rem(190px);
+}
+
+.strategy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(100px) rem(80px);
+  margin-bottom: rem(60px);
+  background-color: var(--color-light);
+  border-radius: 10px;
+  box-shadow: 9px 9px 35px rgb(56 11 113 / 10%);
+  transform: translateY(rem(-100px));
+
+  &__subtitle {
+    margin-bottom: rem(20px);
+  }
+
+  &__title {
+    max-width: rem(392px);
+    margin-bottom: rem(25px);
+  }
+
+  &__text {
+    max-width: rem(470px);
+  }
+}
+
+.strategy-item {
+  display: flex;
+  align-items: flex-start;
+
+  &:not(:last-child) {
+    margin-bottom: rem(65px);
+  }
+
+  &__image {
+    margin-right: rem(25px);
+  }
+
+  &__name {
+    margin-bottom: rem(10px);
+  }
+
+  &__description {
+    max-width: rem(270px);
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: rem(150px);
+  }
+
+  &__subtitle {
+    margin-bottom: rem(20px);
+  }
+
+  &__title {
+    max-width: rem(490px);
+    margin-bottom: rem(25px);
+  }
+
+  &__text {
+    max-width: rem(456px);
+    margin-bottom: rem(30px);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(18px) rem(26px);
+  }
+
+  &__item {
+    color: var(--color-primary);
+
+    &::before {
+      display: inline-block;
+      width: rem(12px);
+      height: rem(12px);
+      margin-right: rem(20px);
+      content: "";
+      background-image: url("#/tick");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  &__chars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(25px);
+  }
+}
+
+.info-char {
+  display: flex;
+  align-items: center;
+  padding: rem(25px) rem(60px) rem(25px) rem(25px);
+  background-color: #f6f1ff;
+  border-radius: 10px;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(64px);
+    height: rem(64px);
+    margin-right: rem(20px);
+    background-color: var(--color-bush);
+
+    svg {
+      width: rem(28px);
+      height: rem(28px);
+    }
+  }
+
+  &__percent {
+    margin-bottom: rem(6px);
+    font-size: rem(28px);
+    font-weight: 400;
+    color: var(--color-primary);
+  }
+
+  &__name {
+    font-size: rem(15px);
+    color: var(--color-primary);
+  }
+}

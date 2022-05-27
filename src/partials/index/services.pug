@@ -1,0 +1,40 @@
+section.services
+  .container.services__container
+    h2.title.title--xl.title--primary.services__title Our Services
+    ul.list-reset.services__list
+      li.services-card.services-card--active
+        .services-card__icon
+          +icon("black-paper-plane")
+        h5.services-card__name SEO & Marketing
+      li.services-card
+        .services-card__icon
+          +icon("mail")
+        h5.services-card__name Email Marketing
+      li.services-card
+        .services-card__icon
+          +icon("mobile")
+        h5.services-card__name Mobile Marketing
+      li.services-card
+        .services-card__icon
+          +icon("tv")
+        h5.services-card__name Google Ads
+      li.services-card
+        .services-card__icon
+          +icon("share")
+        h5.services-card__name Social Media Ads
+      li.services-card
+        .services-card__icon
+          +icon("horn")
+        h5.services-card__name Digital Marketing
+    .service
+      .service__content
+        h2.title.title--primary.service__title SEO & Marketing
+        p.text.text--md.text--primary.service__description
+          | Spyro WordPress theme is insanely flexible and amazingly easy to use. This alone would be enough for a 5 star rating on top of a great tool is even better customer support.
+        ul.list-reset.service__options
+          li.service__option Increase the Organic Traffic
+          li.service__option On-Page Search Engine Optimization
+          li.service__option White hat Backlink Generation
+        button.btn.btn-reset.btn--primary.btn--md Explore Now
+      .service__image
+        +image("girl-in-gadget.jpg", "A girl uses our services in her phone")
