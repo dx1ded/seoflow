@@ -1,0 +1,37 @@
+header.header
+  .container.header__container
+    .header__top
+      address.header-contacts
+        a.link-reset.header-contacts__item.header-contacts__item--phone(href="tel:+18001234567")
+          | +1800-123-4567
+        a.link-reset.header-contacts__item.header-contacts__item--mail(href="mailto:info@brandexponents.com")
+          | info@brandexponents.com
+      .header-socials
+        a.link-reset.header-socials__item(href="#")
+          +icon("facebook")
+        a.link-reset.header-socials__item(href="#")
+          +icon("twitter")
+        a.link-reset.header-socials__item(href="#")
+          +icon("linked-in")
+        a.link-reset.header-socials__item(href="#")
+          +icon("pinterest")
+    .header__bottom#header
+      a.link-reset.header__logo(href="index.html")
+        +image("logo.png", "Логотип проекта SeoFlow")
+      nav.main-nav
+        ul.list-reset.main-nav__list
+          li.main-nav__item
+            a.link-reset(href="#home") Home
+          li.main-nav__item
+            a.link-reset(href="#why") Why SEO?
+          li.main-nav__item
+            a.link-reset(href="#services") Services
+          li.main-nav__item
+            a.link-reset(href="#team") Team
+          li.main-nav__item
+            a.link-reset(href="#pricing") Pricing
+          li.main-nav__item
+            a.link-reset(href="#blog") Blog
+          li.main-nav__item
+            a.link-reset(href="#contact") Contact
+      button.btn.btn-reset.btn--primary.header__cta Enquiry

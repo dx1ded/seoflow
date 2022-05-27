@@ -1,0 +1,11 @@
+.text {
+  line-height: em(34px, 18px);
+
+  &--md {
+    font-size: rem(18px);
+  }
+
+  &--sm {
+    font-size: rem(15px);
+  }
+}

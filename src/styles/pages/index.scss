@@ -1,0 +1,33 @@
+@import "../mixins";
+
+// Components
+
+@import "@cmps/Header/header";
+@import "@cmps/Footer/footer";
+
+// Sections
+
+@import "@partials/index/home";
+
+.top-wave::before,
+.bottom-wave::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: rem(115px);
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.top-wave::before {
+  top: 0;
+  background-image: url("@images/top-wave.png");
+  transform: translateY(-100%);
+}
+
+.bottom-wave::after {
+  bottom: 0;
+  background-image: url("@images/bottom-wave.png");
+  transform: translateY(100%);
+}

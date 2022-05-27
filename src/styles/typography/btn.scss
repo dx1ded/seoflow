@@ -1,0 +1,18 @@
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 32px;
+
+  // Variants
+
+  &--primary {
+    color: var(--color-light);
+    background-color: var(--color-secondary);
+  }
+
+  // Sizes
+
+  &--md {
+    padding: rem(17px) rem(47px);
+  }
+}
