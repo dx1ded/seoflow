@@ -1,0 +1,9 @@
+.partners {
+  margin-bottom: rem(190px);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: rem(20px);
+  }
+}

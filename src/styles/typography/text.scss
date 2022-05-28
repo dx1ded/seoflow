@@ -1,4 +1,5 @@
 .text {
+  font-weight: 400;
   line-height: em(34px, 18px);
 
   // Variants
@@ -12,6 +13,10 @@
   }
 
   // Sizes
+
+  &--xl {
+    font-size: rem(24px);
+  }
 
   &--md {
     font-size: rem(18px);

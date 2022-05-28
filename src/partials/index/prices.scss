@@ -1,0 +1,87 @@
+.prices {
+  padding: rem(100px) 0;
+  margin-bottom: rem(190px);
+  background-color: var(--color-purple);
+
+  &__title {
+    margin-bottom: rem(15px);
+  }
+
+  &__text {
+    margin-bottom: rem(60px);
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(40px);
+  }
+
+  &__title,
+  &__text {
+    text-align: center;
+  }
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  padding: rem(40px) rem(30px) rem(50px);
+  background-color: var(--color-light);
+  border-radius: 15px;
+
+  &__name {
+    margin-bottom: rem(50px);
+    font-size: rem(22px);
+    font-weight: 400;
+    color: var(--color-secondary);
+  }
+
+  &__price {
+    margin-bottom: rem(40px);
+    font-size: rem(20px);
+    color: #5b25b3;
+
+    sup {
+      font-size: rem(50px);
+    }
+  }
+
+  &__options {
+    margin-bottom: rem(70px);
+  }
+
+  &__option {
+    &::before {
+      display: inline-block;
+      width: rem(12px);
+      height: rem(12px);
+      margin-right: rem(20px);
+      content: "";
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(10px);
+    }
+
+    &--tick::before {
+      background-image: url("#/tick");
+    }
+
+    &--cross::before {
+      background-image: url("#/cross");
+    }
+  }
+
+  &__buy {
+    margin-top: auto;
+    text-align: center;
+  }
+
+  &__name,
+  &__price {
+    text-align: center;
+  }
+}

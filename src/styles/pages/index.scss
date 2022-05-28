@@ -1,5 +1,9 @@
 @import "../mixins";
 
+// Libs
+
+@import "swiper/swiper";
+
 // Components
 
 @import "@cmps/Header/header";
@@ -12,22 +16,24 @@
 @import "@partials/index/optimization";
 @import "@partials/index/services";
 @import "@partials/index/how";
-
-.site-container {
-  height: 20000px;
-}
+@import "@partials/index/team";
+@import "@partials/index/prices";
+@import "@partials/index/reviews";
+@import "@partials/index/partners";
+@import "@partials/index/news";
 
 .top-wave,
 .bottom-wave {
   position: relative;
-  z-index: -1;
 
   &::before,
   &::after {
     position: absolute;
     left: 0;
+    z-index: -1;
     width: 100%;
     height: rem(115px);
+    pointer-events: none;
     content: "";
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -43,6 +49,10 @@
 
   &--violet::before {
     background-image: url("@images/top-wave-violet.png");
+  }
+
+  &--selago::before {
+    background-image: url("@images/top-wave-selago.png");
   }
 }
 

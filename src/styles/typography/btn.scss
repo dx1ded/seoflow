@@ -1,6 +1,7 @@
 .btn {
   display: inline-block;
   cursor: pointer;
+  border: 2px solid currentcolor;
   border-radius: 32px;
 
   // Variants
@@ -8,11 +9,16 @@
   &--primary {
     color: var(--color-light);
     background-color: var(--color-secondary);
+    border-color: transparent;
+  }
+
+  &--secondary {
+    color: var(--color-primary);
   }
 
   // Sizes
 
   &--md {
-    padding: rem(17px) rem(47px);
+    padding: rem(16px) rem(47px);
   }
 }

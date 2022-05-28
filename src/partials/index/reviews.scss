@@ -1,0 +1,79 @@
+.reviews {
+  margin-bottom: rem(130px);
+  text-align: center;
+
+  &__container {
+    padding-bottom: rem(130px);
+    border-bottom: 1px solid #e9e9e9;
+  }
+
+  &__title::after {
+    display: block;
+    width: rem(34px);
+    height: rem(34px);
+    margin: rem(20px) auto rem(30px);
+    content: "";
+    background-image: url("@images/quotes.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+.reviews-slider {
+  &__pagination {
+    margin-top: rem(30px);
+  }
+
+  &__bullet {
+    display: inline-block;
+    width: rem(8px);
+    height: rem(8px);
+    cursor: pointer;
+    background-color: rgb(34 34 34 / 40%);
+
+    &:not(:last-child) {
+      margin-right: rem(20px);
+    }
+
+    &--active {
+      background-color: #222;
+    }
+  }
+}
+
+.review {
+  &__quote {
+    display: inline-block;
+    max-width: rem(702px);
+    margin-bottom: rem(25px);
+
+    &::before {
+      margin-right: rem(8px);
+      content: "\201d";
+    }
+
+    &::after {
+      margin-left: rem(8px);
+      content: "\201c";
+    }
+  }
+}
+
+.review-author {
+  &__photo {
+    width: rem(70px);
+    height: rem(70px);
+    margin: 0 auto rem(10px);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+
+  &__name {
+    color: var(--color-bush);
+  }
+}
