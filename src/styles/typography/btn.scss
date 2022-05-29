@@ -3,6 +3,10 @@
   cursor: pointer;
   border: 2px solid currentcolor;
   border-radius: 32px;
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
 
   // Variants
 
@@ -10,10 +14,20 @@
     color: var(--color-light);
     background-color: var(--color-secondary);
     border-color: transparent;
+
+    &:hover {
+      background-color: var(--color-black);
+    }
   }
 
   &--secondary {
     color: var(--color-primary);
+
+    &:hover {
+      color: var(--color-light);
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
   }
 
   // Sizes

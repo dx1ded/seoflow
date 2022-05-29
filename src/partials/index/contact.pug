@@ -1,0 +1,44 @@
+section.contact
+  .get.bottom-wave.bottom-wave--dark
+    .container
+      h2.title.title--xl.title--thindly.get__title Get in touch
+      p.text.text--md.text--secondary.get__text
+        | Let us know know about your requirements
+  .container
+    .contact__cards
+      address.contact-item
+        .contact-item__icon
+          +image("address.jpg", "")(aria-hidden="true")
+        h4.title.title--md.title--primary.contact-item__name Address
+        p.text.text--sm.text--primary.contact-item__description
+          | Express Chambers II Spaces Works, Level 5, Royapettah, Chennai – 600014
+      address.contact-item
+        .contact-item__icon
+          +image("phone-book.jpg", "")(aria-hidden="true")
+        h4.title.title--md.title--primary.contact-item__name Phone
+        p.text.text--sm.text--primary.contact-item__description
+          | Enquiry: 1800-123-4567 Order: 2400-480-894
+      address.contact-item
+        .contact-item__icon
+          +image("letter.jpg", "")(aria-hidden="true")
+        h4.title.title--md.title--primary.contact-item__name Email
+        p.text.text--sm.text--primary.contact-item__description
+          | help@brandexponent.com support@brandexponent.com
+    .contact__wrapper
+      .contact__image
+        +image("man-with-notebook.jpg", "A man is sitting on the floor with laptop")
+      .contact__content
+        h2.title.title--xl.title--primary.contact__title Enquiry Form
+        p.text.text--md.text--primary.contact__text
+          | Dont be shy, Just tell us about yourself and we’ll figure out the best option for you and your project. Dont like Filling up forms ? Mail us then 
+          a(href="mailto:company@email.com") Company@email.com
+        form.contact-form
+          input.contact-form__input(type="text" placeholder="Name" required)
+          input.contact-form__input(type="text" placeholder="Company Name" required)
+          input.contact-form__input(type="email" placeholder="Email" required)
+          input.contact-form__input(type="tel" placeholder="Phone" required)
+          input.contact-form__input(type="text" placeholder="Service" required)
+          input.contact-form__input(type="text" placeholder="Industry" required)
+          textarea.contact-form__input(type="text" placeholder="Message" cols="30" rows="5" required)
+          .contact-form__submit
+            input.btn.btn-reset.btn--primary.btn--md(type="submit" value="Submit")

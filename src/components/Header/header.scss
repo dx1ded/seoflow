@@ -86,12 +86,29 @@
   }
 
   &__item {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: rem(-3px);
+      display: block;
+      width: 0;
+      height: rem(2px);
+      content: "";
+      background-color: var(--color-secondary);
+      transition: width 0.3s ease-in-out;
+    }
+
     a {
       color: var(--color-dark);
     }
 
     &:not(:last-child) {
       margin-right: rem(30px);
+    }
+
+    &:hover::after {
+      width: 100%;
     }
   }
 }

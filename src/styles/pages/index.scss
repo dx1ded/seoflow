@@ -21,6 +21,7 @@
 @import "@partials/index/reviews";
 @import "@partials/index/partners";
 @import "@partials/index/news";
+@import "@partials/index/contact";
 
 .top-wave,
 .bottom-wave {
@@ -65,5 +66,9 @@
 
   &--violet::after {
     background-image: url("@images/bottom-wave-violet.png");
+  }
+
+  &--dark::after {
+    background-image: url("@images/bottom-wave-dark.png");
   }
 }
