@@ -34,5 +34,14 @@
 
   &--md {
     padding: rem(16px) rem(47px);
+
+    @include sm-laptop {
+      padding: rem(14px) rem(34px);
+      font-size: rem(12px);
+    }
+
+    @include tablet {
+      padding: rem(12px) rem(30px);
+    }
   }
 }

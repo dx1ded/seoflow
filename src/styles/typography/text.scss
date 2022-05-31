@@ -20,9 +20,25 @@
 
   &--md {
     font-size: rem(18px);
+
+    @include sm-laptop {
+      font-size: rem(16px);
+    }
+
+    @include tablet {
+      font-size: rem(14px);
+    }
+
+    @include mobile {
+      font-size: rem(12px);
+    }
   }
 
   &--sm {
     font-size: rem(15px);
+
+    @include l-tablet {
+      font-size: rem(13px);
+    }
   }
 }
