@@ -11,6 +11,32 @@
     grid-template-columns: repeat(6, 1fr);
     gap: rem(35px);
     margin-bottom: rem(90px);
+
+    @include l-tablet {
+      gap: rem(15px);
+      margin-bottom: rem(120px);
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: rem(80px);
+    }
+
+    @include l-mobile {
+      margin-bottom: rem(60px);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include tablet {
+    margin-bottom: rem(120px);
+  }
+
+  @include mobile {
+    margin-bottom: rem(90px);
   }
 }
 
@@ -30,6 +56,10 @@
     content: "";
     background-color: var(--color-secondary);
     transform: translate(-50%, 50%);
+
+    @include tablet {
+      display: none;
+    }
   }
 
   svg {
@@ -41,6 +71,10 @@
   &__name {
     font-weight: 400;
     color: var(--color-primary);
+
+    @include resolution(420px) {
+      font-size: rem(12px);
+    }
   }
 
   &--active {
@@ -57,18 +91,38 @@
   align-items: center;
   justify-content: space-between;
 
+  &__content {
+    margin-right: rem(40px);
+  }
+
   &__title {
     margin-bottom: rem(15px);
     font-size: rem(34px);
+
+    @include sm-laptop {
+      font-size: rem(28px);
+    }
+
+    @include tablet {
+      font-size: rem(20px);
+    }
   }
 
   &__description {
     max-width: rem(420px);
     margin-bottom: rem(25px);
+
+    @include tablet {
+      font-size: rem(13px);
+    }
   }
 
   &__options {
     margin-bottom: rem(50px);
+
+    @include sm-laptop {
+      margin-bottom: rem(30px);
+    }
   }
 
   &__option {
@@ -89,6 +143,34 @@
 
     &:not(:last-child) {
       margin-bottom: rem(20px);
+    }
+
+    @include sm-laptop {
+      font-size: rem(14px);
+
+      &::before {
+        margin-right: rem(12px);
+      }
+    }
+
+    @include tablet {
+      font-size: rem(13px);
+
+      &::before {
+        width: rem(14px);
+        height: rem(14px);
+        margin-right: rem(10px);
+      }
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+    }
+
+    @include l-mobile {
+      display: none;
     }
   }
 }
