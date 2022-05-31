@@ -7,20 +7,58 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__content {
+    margin-right: rem(40px);
+
+    @include tablet {
+      margin: 0 0 rem(40px);
+    }
   }
 
   &__title {
     max-width: rem(302px);
     margin-bottom: rem(25px);
+
+    @include sm-laptop {
+      margin-bottom: rem(20px);
+    }
   }
 
   &__text {
-    max-width: rem(432px);
+    max-width: em(432px, 18px);
     margin-bottom: rem(25px);
+
+    @include sm-laptop {
+      margin-bottom: rem(20px);
+    }
+
+    @include resolution(850px) {
+      font-size: rem(13px);
+    }
+
+    @include tablet {
+      max-width: rem(460px);
+    }
   }
 
   &__methods {
     display: flex;
+    margin-right: rem(-30px);
+
+    @include sm-laptop {
+      margin-right: rem(-15px);
+    }
+
+    @include resolution(468px) {
+      flex-direction: column;
+    }
   }
 
   &__column {
@@ -29,6 +67,26 @@
     &:nth-child(2) {
       margin-top: rem(30px);
     }
+
+    @include resolution(1150px) {
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+    }
+
+    @include sm-laptop {
+      margin-right: rem(15px);
+    }
+
+    @include resolution(468px) {
+      &:not(:last-child) {
+        margin-bottom: rem(15px);
+      }
+    }
+  }
+
+  @include sm-laptop {
+    padding: rem(60px) 0;
   }
 }
 
@@ -47,13 +105,56 @@
       width: 100%;
       height: 100%;
     }
+
+    @include sm-laptop {
+      width: rem(40px);
+      height: rem(40px);
+      margin-bottom: rem(20px);
+    }
+
+    @include tablet {
+      width: rem(30px);
+      height: rem(30px);
+      margin-bottom: rem(15px);
+    }
   }
 
   &__name {
     margin-bottom: rem(15px);
+
+    @include sm-laptop {
+      margin-bottom: rem(10px);
+    }
+
+    @include tablet {
+      margin-bottom: rem(5px);
+    }
   }
 
   &:not(:last-child) {
     margin-bottom: rem(30px);
+  }
+
+  @include resolution(1150px) {
+    width: rem(280px);
+    padding: rem(26px);
+  }
+
+  @include sm-laptop {
+    width: rem(250px);
+    padding: rem(25px) rem(20px);
+
+    &:not(:last-child) {
+      margin-bottom: rem(15px);
+    }
+  }
+
+  @include resolution(850px) {
+    width: rem(240px);
+    padding: rem(25px) rem(15px);
+  }
+
+  @include tablet {
+    width: auto;
   }
 }

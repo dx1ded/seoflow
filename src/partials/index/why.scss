@@ -4,6 +4,10 @@
   @include l-mobile {
     padding-bottom: rem(130px);
   }
+
+  @include mobile {
+    padding-bottom: rem(100px);
+  }
 }
 
 .strategy {
