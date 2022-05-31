@@ -3,22 +3,47 @@
 
   &__title {
     margin-bottom: rem(10px);
+
+    @include l-mobile {
+      margin-bottom: rem(5px);
+    }
   }
 
   &__text {
     margin-bottom: rem(60px);
+
+    @include tablet {
+      margin-bottom: rem(50px);
+    }
   }
 
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: rem(60px) rem(30px);
-    justify-content: space-between;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+
+    @include resolution(430px) {
+      grid-template-columns: 1fr;
+      gap: rem(40px) 0;
+    }
   }
 
   &__title,
   &__text {
     text-align: center;
+  }
+
+  @include tablet {
+    margin-bottom: rem(120px);
+  }
+
+  @include mobile {
+    margin-bottom: rem(90px);
   }
 }
 
@@ -36,6 +61,17 @@
       height: 100%;
       object-fit: cover;
       border-radius: 100%;
+    }
+
+    @include sm-laptop {
+      width: rem(70px);
+      height: rem(70px);
+      margin-right: rem(15px);
+    }
+
+    @include tablet {
+      width: rem(60px);
+      height: rem(60px);
     }
   }
 }

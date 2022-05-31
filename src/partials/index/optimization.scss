@@ -91,6 +91,9 @@
 
   @include sm-laptop {
     padding: rem(60px) 0;
+  }
+
+  @include tablet {
     margin-bottom: rem(120px);
   }
 
