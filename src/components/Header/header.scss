@@ -1,3 +1,5 @@
+@import "@cmps/Logo/logo";
+
 .header {
   position: absolute;
   z-index: var(--z-header);
@@ -11,11 +13,28 @@
     padding: rem(26px) rem(15px);
     background-color: var(--color-light);
     border-radius: 10px;
+
+    @include tablet {
+      padding: rem(20px) rem(15px);
+    }
+
+    @include l-mobile {
+      padding: rem(15px);
+    }
   }
 
   &__cta {
     padding: rem(13px) rem(28px);
     font-size: rem(13px);
+
+    @include l-tablet {
+      padding: rem(10px) rem(24px);
+    }
+
+    @include l-mobile {
+      padding: rem(8px) rem(20px);
+      font-size: rem(11px);
+    }
   }
 
   &__top,
@@ -58,6 +77,31 @@
     &--mail::before {
       background-image: url("#/paper-plane");
     }
+
+    @include l-tablet {
+      font-size: rem(13px);
+
+      &::before {
+        width: rem(24px);
+        height: rem(24px);
+        margin-right: rem(10px);
+        background-size: rem(10px);
+      }
+    }
+
+    @include l-mobile {
+      font-size: rem(11px);
+
+      &::before {
+        width: rem(20px);
+        height: rem(20px);
+        margin-right: rem(8px);
+      }
+
+      &:not(:last-child) {
+        margin-right: rem(10px);
+      }
+    }
   }
 }
 
@@ -77,6 +121,19 @@
       width: 100%;
       height: 100%;
     }
+
+    @include l-tablet {
+      width: rem(16px);
+      height: rem(16px);
+
+      &:not(:last-child) {
+        margin-right: rem(12px);
+      }
+    }
+  }
+
+  @include l-mobile {
+    display: none;
   }
 }
 
@@ -110,5 +167,19 @@
     &:hover::after {
       width: 100%;
     }
+
+    @include l-tablet {
+      a {
+        font-size: rem(14px);
+      }
+
+      &:not(:last-child) {
+        margin-right: rem(24px);
+      }
+    }
+  }
+
+  @include tablet {
+    display: none;
   }
 }

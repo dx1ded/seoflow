@@ -7,8 +7,11 @@ block config
 block styles
   +style("styles/index.css")
 
+include @cmps/Burger/burger
+
 block partials
   include @cmps/Header/header
+  +burger
   main
     include @partials/index/home
     include @partials/index/why

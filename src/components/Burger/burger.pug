@@ -1,0 +1,30 @@
+include @cmps/Logo/logo
+
+mixin burger
+  .burger
+    .container.burger__container
+      .burger__top
+        +logo
+        button.btn-reset.burger__close#burger-close(aria-label="Закрыть меню")
+      nav.burger-nav
+        ul.list-reset.burger-nav__list
+          li.burger-nav__item
+            a.link-reset(href="#") Home
+          li.burger-nav__item
+            a.link-reset(href="#") Why SEO?
+          li.burger-nav__item
+            a.link-reset(href="#") Services
+          li.burger-nav__item
+            a.link-reset(href="#") Team
+          li.burger-nav__item
+            a.link-reset(href="#") Pricing
+          li.burger-nav__item
+            a.link-reset(href="#") Blog
+          li.burger-nav__item
+            a.link-reset(href="#") Contact
+
+mixin burger-open
+  button.btn-reset.burger__open#burger-open(aria-label="Открыть меню")
+    span
+    span
+    span

@@ -24,6 +24,7 @@
 }
 
 .plan {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: rem(40px) rem(30px) rem(50px);
@@ -78,6 +79,22 @@
   &__buy {
     margin-top: auto;
     text-align: center;
+  }
+
+  &--popular::before {
+    position: absolute;
+    top: rem(16px);
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(90px);
+    height: rem(30px);
+    padding-right: rem(2px);
+    clip-path: polygon(100% 0%, 92% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    color: var(--color-light);
+    content: "Popular";
+    background-color: #eb5757;
   }
 
   &__name,
