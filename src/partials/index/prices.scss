@@ -5,29 +5,59 @@
 
   &__title {
     margin-bottom: rem(15px);
+
+    @include sm-laptop {
+      margin-bottom: rem(10px);
+    }
   }
 
   &__text {
     margin-bottom: rem(60px);
+
+    @include sm-laptop {
+      margin-bottom: rem(40px);
+    }
   }
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: rem(40px);
+    display: flex;
+    justify-content: center;
+    margin: 0 rem(-40px) rem(-40px) 0;
+
+    @include sm-laptop {
+      margin: 0 rem(-20px) rem(-20px) 0;
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
   }
 
   &__title,
   &__text {
     text-align: center;
   }
+
+  @include sm-laptop {
+    padding: rem(60px) 0;
+  }
+
+  @include tablet {
+    margin-bottom: rem(120px);
+  }
+
+  @include mobile {
+    margin-bottom: rem(90px);
+  }
 }
 
 .plan {
   position: relative;
   display: flex;
+  flex-basis: rem(360px);
   flex-direction: column;
   padding: rem(40px) rem(30px) rem(50px);
+  margin: 0 rem(40px) rem(40px) 0;
   background-color: var(--color-light);
   border-radius: 15px;
 
@@ -36,6 +66,11 @@
     font-size: rem(22px);
     font-weight: 400;
     color: var(--color-secondary);
+
+    @include sm-laptop {
+      margin-bottom: rem(30px);
+      font-size: rem(18px);
+    }
   }
 
   &__price {
@@ -46,10 +81,23 @@
     sup {
       font-size: rem(50px);
     }
+
+    @include sm-laptop {
+      margin-bottom: rem(20px);
+      font-size: rem(18px);
+
+      sup {
+        font-size: rem(32px);
+      }
+    }
   }
 
   &__options {
     margin-bottom: rem(70px);
+
+    @include sm-laptop {
+      margin-bottom: rem(30px);
+    }
   }
 
   &__option {
@@ -74,6 +122,20 @@
     &--cross::before {
       background-image: url("#/cross");
     }
+
+    @include sm-laptop {
+      font-size: rem(13px);
+
+      &::before {
+        width: rem(10px);
+        height: rem(10px);
+        margin-right: rem(12px);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: rem(6px);
+      }
+    }
   }
 
   &__buy {
@@ -95,10 +157,22 @@
     color: var(--color-light);
     content: "Popular";
     background-color: #eb5757;
+
+    @include sm-laptop {
+      width: rem(60px);
+      height: rem(20px);
+      font-size: rem(12px);
+    }
   }
 
   &__name,
   &__price {
     text-align: center;
+  }
+
+  @include sm-laptop {
+    flex-basis: rem(298px);
+    padding: rem(25px) rem(20px);
+    margin: 0 rem(20px) rem(20px) 0;
   }
 }
