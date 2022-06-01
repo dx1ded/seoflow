@@ -4,30 +4,58 @@
   border-top: 1px solid rgb(44 18 88 / 10%);
 
   &__top {
+    flex-wrap: wrap;
     padding: rem(70px) 0 rem(66px);
+    margin: 0 rem(-40px) rem(-40px) 0;
+
+    @include tablet {
+      padding: rem(50px) 0;
+    }
+
+    @include l-mobile {
+      padding: rem(35px) 0;
+    }
   }
 
   &__bottom {
     padding: rem(40px) 0;
     border-top: 1px solid #dfdfdf;
+
+    @include tablet {
+      padding: rem(30px) 0;
+    }
+
+    @include mobile {
+      padding: rem(20px) 0;
+    }
   }
 
   &__column {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 0 rem(40px) rem(40px) 0;
 
     img {
       margin-bottom: rem(24px);
+
+      @include sm-laptop {
+        margin-bottom: rem(20px);
+      }
     }
   }
 
   &__text {
-    max-width: rem(204px);
+    max-width: em(204px, 15px);
   }
 
   &__title {
     margin-bottom: rem(24px);
+
+    @include sm-laptop {
+      margin-bottom: rem(20px);
+      font-size: rem(16px);
+    }
   }
 
   &__link {
@@ -36,6 +64,14 @@
 
     &:not(:last-child) {
       margin-bottom: rem(20px);
+    }
+
+    @include sm-laptop {
+      font-size: rem(12px);
+
+      &:not(:last-child) {
+        margin-bottom: rem(14px);
+      }
     }
   }
 
@@ -61,6 +97,19 @@
       height: rem(22px);
       margin-right: rem(10px);
     }
+
+    @include sm-laptop {
+      font-size: rem(12px);
+
+      &:not(:last-child) {
+        margin-bottom: rem(14px);
+      }
+
+      svg {
+        width: rem(16px);
+        height: rem(16px);
+      }
+    }
   }
 
   &__socials {
@@ -71,6 +120,15 @@
 
       &:not(:last-child) {
         margin-right: rem(24px);
+      }
+
+      @include sm-laptop {
+        width: rem(18px);
+        height: rem(18px);
+
+        &:not(:last-child) {
+          margin-right: rem(20px);
+        }
       }
     }
 
@@ -87,6 +145,18 @@
   &__rights,
   &__sign {
     color: var(--color-bush);
+
+    @include sm-laptop {
+      font-size: rem(14px);
+    }
+
+    @include tablet {
+      font-size: rem(12px);
+    }
+
+    @include resolution(420px) {
+      font-size: rem(10px);
+    }
   }
 
   &__top,
