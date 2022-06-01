@@ -5,8 +5,18 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: rem(30px);
+    justify-content: center;
     margin-bottom: rem(55px);
     transform: translateY(rem(-45px));
+
+    @include tablet {
+      gap: rem(15px);
+      margin-bottom: rem(10px);
+    }
+
+    @include resolution(550px) {
+      grid-template-columns: minmax(0, rem(300px));
+    }
   }
 
   &__wrapper {
@@ -15,8 +25,28 @@
     justify-content: space-between;
   }
 
+  &__image {
+    margin-right: rem(80px);
+
+    img {
+      width: 100%;
+    }
+
+    @include sm-laptop {
+      margin-right: rem(40px);
+    }
+
+    @include resolution(850px) {
+      display: none;
+    }
+  }
+
   &__content {
-    flex-basis: rem(530px);
+    flex: 0 1 rem(530px);
+
+    @include resolution(850px) {
+      flex: 1 1 auto;
+    }
   }
 
   &__title {
@@ -30,6 +60,18 @@
       color: var(--color-secondary);
       text-decoration: none;
     }
+
+    @include sm-laptop {
+      margin-bottom: rem(20px);
+    }
+
+    @include resolution(850px) {
+      max-width: rem(520px);
+    }
+  }
+
+  @include tablet {
+    margin-bottom: rem(70px);
   }
 }
 
@@ -43,16 +85,53 @@
 
   &__icon {
     margin-bottom: rem(20px);
+
+    @include sm-laptop {
+      margin-bottom: rem(15px);
+
+      img {
+        height: rem(40px);
+      }
+    }
+
+    @include tablet {
+      margin-bottom: rem(10px);
+
+      img {
+        height: rem(30px);
+      }
+    }
   }
 
   &__name {
     margin-bottom: rem(20px);
+
+    @include sm-laptop {
+      margin-bottom: rem(10px);
+      font-size: rem(16px);
+    }
+
+    @include tablet {
+      font-size: rem(14px);
+    }
   }
 
   &__description {
-    max-width: rem(200px);
+    max-width: em(200px, 15px);
     margin: 0 auto;
     text-align: center;
+
+    @include sm-laptop {
+      font-size: rem(13px);
+    }
+
+    @include tablet {
+      font-size: rem(11px);
+    }
+  }
+
+  @include tablet {
+    padding: rem(20px) rem(10px);
   }
 }
 
@@ -69,6 +148,20 @@
     border: 1px solid rgb(44 18 88 / 10%);
     border-radius: 5px;
     outline: none;
+
+    @include sm-laptop {
+      padding: rem(10px) rem(18px);
+      font-size: rem(16px);
+    }
+
+    @include resolution(520px) {
+      grid-column: span 2;
+    }
+
+    @include mobile {
+      padding: rem(10px) rem(10px);
+      font-size: rem(14px);
+    }
   }
 
   textarea {
@@ -79,6 +172,10 @@
   input[type="submit"] {
     font-weight: 700;
   }
+
+  @include sm-laptop {
+    gap: rem(15px);
+  }
 }
 
 .get {
@@ -88,5 +185,13 @@
 
   &__title {
     margin-bottom: rem(10px);
+  }
+
+  @include sm-laptop {
+    padding: rem(90px) 0 rem(110px);
+  }
+
+  @include tablet {
+    padding: rem(60px) 0 rem(90px);
   }
 }

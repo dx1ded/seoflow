@@ -3,7 +3,17 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: rem(20px);
+    grid-template-columns: repeat(auto-fit, minmax(rem(110px), 1fr));
+    gap: rem(60px) rem(30px);
+    align-items: center;
+    justify-items: center;
+  }
+
+  @include tablet {
+    margin-bottom: rem(120px);
+  }
+
+  @include mobile {
+    margin-bottom: rem(90px);
   }
 }

@@ -3,10 +3,6 @@
 
   &__title {
     margin-bottom: rem(10px);
-
-    @include l-mobile {
-      margin-bottom: rem(5px);
-    }
   }
 
   &__text {
@@ -21,10 +17,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: rem(60px) rem(30px);
+    justify-items: center;
 
     @include tablet {
       grid-template-columns: repeat(2, 1fr);
-      justify-items: center;
     }
 
     @include resolution(430px) {

@@ -5,6 +5,18 @@
   &__container {
     padding-bottom: rem(130px);
     border-bottom: 1px solid #e9e9e9;
+
+    @include sm-laptop {
+      padding-bottom: rem(100px);
+    }
+
+    @include tablet {
+      padding-bottom: rem(90px);
+    }
+
+    @include l-mobile {
+      padding-bottom: rem(70px);
+    }
   }
 
   &__title::after {
@@ -16,12 +28,45 @@
     background-image: url("@images/quotes.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+
+    @include sm-laptop {
+      width: rem(24px);
+      height: rem(24px);
+      margin: rem(20px) auto;
+    }
+
+    @include tablet {
+      width: rem(20px);
+      height: rem(20px);
+      margin: rem(15px) auto rem(10px);
+    }
+
+    @include l-mobile {
+      width: rem(15px);
+      height: rem(15px);
+    }
+  }
+
+  @include sm-laptop {
+    margin-bottom: rem(100px);
+  }
+
+  @include tablet {
+    margin-bottom: rem(90px);
   }
 }
 
 .reviews-slider {
   &__pagination {
     margin-top: rem(30px);
+
+    @include tablet {
+      margin-top: rem(20px);
+    }
+
+    @include l-mobile {
+      margin-top: rem(15px);
+    }
   }
 
   &__bullet {
@@ -38,13 +83,22 @@
     &--active {
       background-color: #222;
     }
+
+    @include l-mobile {
+      width: rem(6px);
+      height: rem(6px);
+
+      &:not(:last-child) {
+        margin-right: rem(15px);
+      }
+    }
   }
 }
 
 .review {
   &__quote {
     display: inline-block;
-    max-width: rem(702px);
+    max-width: em(702px, 24px);
     margin-bottom: rem(25px);
 
     &::before {
@@ -71,9 +125,42 @@
       object-fit: cover;
       border-radius: 100%;
     }
+
+    @include sm-laptop {
+      width: rem(65px);
+      height: rem(65px);
+    }
+
+    @include tablet {
+      width: rem(60px);
+      height: rem(60px);
+    }
+
+    @include l-mobile {
+      width: rem(50px);
+      height: rem(50px);
+    }
   }
 
   &__name {
     color: var(--color-bush);
+
+    @include sm-laptop {
+      font-size: rem(16px);
+    }
+
+    @include l-mobile {
+      font-size: rem(14px);
+    }
+  }
+
+  &__position {
+    @include sm-laptop {
+      font-size: rem(12px);
+    }
+
+    @include l-mobile {
+      font-size: rem(10px);
+    }
   }
 }
