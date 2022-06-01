@@ -16,7 +16,7 @@
 
     &--active {
       position: fixed;
-      top: 0;
+      top: rem(20px);
       left: 50%;
       width: calc(100% - var(--container-horizontal-offset) * 2);
       max-width: var(--design-mw);
