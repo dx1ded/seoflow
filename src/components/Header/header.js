@@ -1,16 +1,17 @@
-// const header = document.querySelector("#header")
-// const headerActiveClassName = "header__bottom--active"
+const headerTop = document.querySelector(".header__top")
+const stickyElement = document.querySelector("#header-sticky")
 
-// const options = {
-//   threshold: 0.99
-// }
+const headerTopHeight = headerTop.scrollHeight
+const stickyElementActiveClassName = "header__bottom--active"
 
-// const observer = new IntersectionObserver(([entry]) => {
-//   if (entry.intersectionRatio < 1) {
-//     console.log(1)
+function scrollHandler() {
+  const yAxis = window.scrollY
 
-//     header.classList.add(headerActiveClassName)
-//   }
-// }, options)
+  if (yAxis >= headerTopHeight) {
+    return stickyElement.classList.add(stickyElementActiveClassName)
+  }
 
-// observer.observe(header)
+  stickyElement.classList.remove(stickyElementActiveClassName)
+}
+
+window.addEventListener("scroll", scrollHandler)

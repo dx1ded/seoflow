@@ -2,7 +2,7 @@ include @cmps/Logo/logo
 include @cmps/Burger/burger
 
 header.header
-  .container.header__container
+  .container
     .header__top
       address.header-contacts
         a.link-reset.header-contacts__item.header-contacts__item--phone(href="tel:+18001234567")
@@ -18,7 +18,7 @@ header.header
           +icon("linked-in")
         a.link-reset.header-socials__item(href="#")
           +icon("pinterest")
-    .header__bottom#header
+    .header__bottom#header-sticky
       +logo
         +burger-open
       nav.main-nav

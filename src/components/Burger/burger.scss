@@ -8,8 +8,8 @@
   visibility: hidden;
   background-color: var(--color-light);
   transition:
-    visibility 0.3s ease-in-out,
-    transform 0.3s ease-in-out;
+    visibility 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
   transform: translateX(-100%);
 
   &__container {
@@ -20,7 +20,7 @@
     height: inherit;
 
     &::after {
-      padding: rem(40px) 0;
+      padding: rem(20px) 0;
       content: "";
     }
   }
@@ -30,7 +30,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: rem(40px) 0;
+    padding: rem(20px) 0;
   }
 
   &__open {

@@ -1,3 +1,9 @@
+// Libs
+
+import smoothscrollAnchorPolyfill from "smoothscroll-anchor-polyfill"
+
+smoothscrollAnchorPolyfill.polyfill()
+
 // Components
 
 import "@cmps/Header/header"
